@@ -1,0 +1,26 @@
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #EBEAEB;
+    cursor: pointer;
+}
+
+.title:hover{
+    background-color: #C6C4C6;
+    transition: .5s all ease;
+}
+
+.content{
+    overflow: hidden;
+    transition: all ease 0.4s;
+}
+
+.content-text{
+    padding: 15px;
+}
+.active{
+    /* display: block; */
+    /* height: auto; */
+}

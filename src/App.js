@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Header from './Header/Header';
 
 function App() {
+  // const [arr,setArr] = useState(["asdas dasd aspod maspod paso", "asdmaposdmpasomd", "gpsdomgps dpgsmg", "asdmaspodmpoa asdas", "dapms paspo maspo aspm"])
+  const arr = ["asdas dasd aspod maspod paso", "asdmaposdmpasomd", "gpsdomgps dpgsmg", "asdmaspodmpoa asdas", "dapms paspo maspo aspm"]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>
+        <div className='wrapper'>
+          {
+            arr.map((el) => (
+              <Header text={el} />
+            ))
+          }
+        </div>
+      </div>
     </div>
   );
 }
