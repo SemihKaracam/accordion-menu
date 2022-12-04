@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import "./header.css"
 
-const Header = ({text}) => {
+const Header = ({faq}) => {
     const [active,setActive] = useState("")
     const [height,setHeight] = useState("0px")
     const content = useRef(null)
@@ -14,11 +14,11 @@ const Header = ({text}) => {
     return (
         <div className='header'>
             <div className='title' onClick={handleToggle}>
-                <h3>What is your return policy</h3>
+                <h3>{faq.question}</h3>
                 {active == "active" ? <i class="fa fa-arrow-down" aria-hidden="true"></i> : <i class="fa fa-arrow-right" aria-hidden="true"></i>}
             </div>
             <div ref={content} style={{maxHeight:`${height}`}} className={`content ${active}`} >
-                <div className='content-text'>{text}</div>
+                <div className='content-text'>{faq.answer}</div>
             </div>
         </div>
     )
